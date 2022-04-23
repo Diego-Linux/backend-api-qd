@@ -49,7 +49,7 @@ exports.getPosts = async (req, res) => {
 
         // await Post.updateMany({ $inc: { views: 1 } });
 
-        res.status(200).json(posts);
+        res.status(200).json({ posts });
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
@@ -81,6 +81,7 @@ exports.postDetails = async (req, res) => {
             'likes': post.likes.length,
             'dislikes': post.dislikes.length,
             'comments': post.comments.length,
+            'views': post.views
         });
     } catch (err) {
         return res.status(500).json({ error: err.message });
