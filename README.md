@@ -107,8 +107,6 @@
 
  - EMAIL_SMTP_USER=
  - EMAIL_SMTP_PASS=
- - EMAIL_ADDRESS_FROM=
- - EMAIL_ADDRESS_REPLY=
 
 ## Recursos adicionais: 
     - "Esqueci minha senha". (Este somente funcionará caso tenha um serviço de e-mail configurado. Como dito acima, usei o SMTP da sendinblue).
