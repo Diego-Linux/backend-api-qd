@@ -82,7 +82,7 @@
 
 ### - Após o login, escolha o plano grátis.
 
-### - Acesse os dados de sua conta, e copie no arquivo ```.env``` do seu projeto as variáveis de ambiente referentes a api da Cloudinary.
+### - Acesse os dados de sua conta, e cole no arquivo ```.env``` do seu projeto as variáveis de ambiente referentes a api da Cloudinary.
 
 ### - Caso não consiga utilizar os serviços cloudinary, isso não impedirá a criação do post..a imagem não é um campo obrigatório, então você pode simplesmente deixar o campo *image* vazio desmarcando o campo file.
 
@@ -95,7 +95,7 @@
 
 ### - Crie uma conta sendinblue em: https://app.sendinblue.com/account/register
 
-### - Escolha o plano grátis e copie no arquivo ```.env``` do seu projeto as variáveis de ambiente referentes a e-mail.
+### - Escolha o plano grátis e cole no arquivo ```.env``` do seu projeto as variáveis de ambiente referentes a e-mail.
 
 ####  Segue o exemplo:
 
