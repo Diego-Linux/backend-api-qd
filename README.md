@@ -21,7 +21,7 @@
 
     - Cookies para manter os dados de sessão no lado do servidor, caso estivéssemos consumindo essa api com algum frontend.
 
-    - API da Cloudinary para armazenar os uploads de imagens.
+    - API da Cloudinary para armazenamento de imagens.
 
     - Mongoose ORM para manipular os dados da nossa database.
 
@@ -55,7 +55,7 @@
 
 </br>
 
-### - Iniciando o crud de usuário, no postman e acesse a rota de *Register* dentro do diretório *Auth*, inclua um _name_, _email_ e _password_:
+### - Iniciando o crud de usuário, no postman acesse a rota de *Register* dentro do diretório *Auth*, inclua um _name_, _email_ e _password_:
 
 ![register](https://user-images.githubusercontent.com/60199339/164947566-2a7088bb-8572-42cf-95fa-a46644525369.png)
 </br>
