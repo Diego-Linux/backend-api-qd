@@ -44,7 +44,18 @@
 
 ### - Após ter instalado as dependências necessárias, use o comando ```yarn start``` para iniciar a api.
 
-### - Iniciando o crud de usuário, abra o postman e acesse a rota de *Register* dentro do diretório *Auth*, inclua um _name_, _email_ e _password_:
+## Arquivo de configuração Postman com os endpoints da API:
+
+- Abra o postman, em ```import``` navegue até o arquivo ```postman.json```
+  dentro do projeto e terá acesso aos endpoints.
+
+![import](https://user-images.githubusercontent.com/60199339/164950548-4efe68f1-d306-4f37-a4f0-9b3b4c5e9d18.png)
+</br></br>
+![postman](https://user-images.githubusercontent.com/60199339/164950570-0eb436d2-6839-4da6-9cf7-63a925b3b99d.png)
+
+</br>
+
+### - Iniciando o crud de usuário, no postman e acesse a rota de *Register* dentro do diretório *Auth*, inclua um _name_, _email_ e _password_:
 
 ![register](https://user-images.githubusercontent.com/60199339/164947566-2a7088bb-8572-42cf-95fa-a46644525369.png)
 </br>
@@ -96,17 +107,6 @@
  - EMAIL_SMTP_PASS=
  - EMAIL_ADDRESS_FROM=
  - EMAIL_ADDRESS_REPLY=
-
-## Arquivo de configuração Postman com os endpoints da API:
-
-- Abra o postman, em ```import``` navegue até o arquivo ```postman.json```
-  dentro do projeto e terá acesso aos endpoints.
-
-![import](https://user-images.githubusercontent.com/60199339/164950548-4efe68f1-d306-4f37-a4f0-9b3b4c5e9d18.png)
-</br></br>
-![postman](https://user-images.githubusercontent.com/60199339/164950570-0eb436d2-6839-4da6-9cf7-63a925b3b99d.png)
-
-</br>
 
 ## Recursos adicionais: 
     - "Esqueci minha senha". (Este somente funcionará caso tenha um serviço de e-mail configurado. Como dito acima, usei o SMTP da sendinblue).
