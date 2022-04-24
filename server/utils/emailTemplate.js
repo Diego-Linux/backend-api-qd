@@ -1,6 +1,6 @@
 exports.newCommentTemplate = async (email, name, content) => {
     const infoEmail = {
-        from: 'diegosudolinux@gmail.com',
+        from: `${process.env.EMAIL_ADDRESS_FROM}`,
         to: email,
         subject: 'Novo comentário',
         html: `
