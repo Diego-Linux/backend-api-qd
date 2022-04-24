@@ -76,7 +76,7 @@
 
 </br>
 
-## Adicionando as variáveis de ambiente do serviço de storage ***Cloudinary***, que é onde armazenaremos as imagens da nossa api.
+## Adicionando as variáveis de ambiente do serviço de storage ***Cloudinary***, onde armazenaremos as imagens da nossa api.
 
 ### - Crie uma conta Cloudinary em: https://cloudinary.com/users/register/free
 
