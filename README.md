@@ -84,7 +84,9 @@
 
 ### - Acesse os dados de sua conta, e copie no arquivo ```.env``` do seu projeto as variáveis de ambiente referentes a api da Cloudinary.
 
-### - Caso não consiga utilizar os serviços cloudinary, isso não impedirá a criação do post..a imagem não é um campo obrigatório, então você pode simplesmente deixar o campo *image* vazio desmarcando o campo file, segue o exemplo:
+### - Caso não consiga utilizar os serviços cloudinary, isso não impedirá a criação do post..a imagem não é um campo obrigatório, então você pode simplesmente deixar o campo *image* vazio desmarcando o campo file.
+
+- Segue o exemplo:
 
 ![InkedUntitled_LI](https://user-images.githubusercontent.com/60199339/164950898-c863061e-c065-4748-8d1d-d60a4aa5476f.jpg)
 
