@@ -65,7 +65,7 @@
 
 </br>
 
-## - Adicionando as variáveis de ambiente do serviço de storage ***Cloudinary***, que é onde armazenaremos as imagens da nossa api.
+## Adicionando as variáveis de ambiente do serviço de storage ***Cloudinary***, que é onde armazenaremos as imagens da nossa api.
 
 ### - Crie uma conta Cloudinary em: https://cloudinary.com/users/register/free
 
@@ -75,7 +75,7 @@
 
 ### - Caso não consiga utilizar os serviços cloudinary, isso não impedirá a criação do post..a imagem não é um campo obrigatório, então você pode simplesmente deixar o campo *image* vazio.
 
-## - Adicionando as variáveis de ambiente SMTP da  ***Sendinblue***.
+## Adicionando as variáveis de ambiente SMTP da  ***Sendinblue***.
 
 ### - Crie uma conta sendinblue em: https://app.sendinblue.com/account/register
 
