@@ -165,7 +165,7 @@
 								"login"
 							]
 						},
-						"description": "Logout.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+						"description": "Logout."
 					},
 					"response": []
 				}
