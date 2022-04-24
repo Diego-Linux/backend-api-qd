@@ -19,7 +19,7 @@
 
     - MongoDB por ser ágil, simples e permitir a  manipulação de diversos dados de forma eficiente.
 
-    - Cookies para manter os dados de sessão no lado do servidor, caso estivéssemos consumindo essa api com algum frontend.
+    - Cookies para armazenar as informações de sessão.
 
     - API da Cloudinary para armazenamento de imagens.
 
