@@ -40,7 +40,7 @@
 
 </br>
 
-## - Iniciando a aplicação.
+## Iniciando a aplicação.
 
 ### - Após ter instalado as dependências necessárias, use o comando ```yarn start``` para iniciar a api.
 
@@ -59,7 +59,7 @@
 
 
 
-### - Agora use este token nas rotas da aplicação, vá em ***Authorization***, escolha a opção ***API Key*** e cole seu token no campo ***Value***
+### Agora use este token nas rotas da aplicação, vá em ***Authorization***, escolha a opção ***API Key*** e cole seu token no campo ***Value***
 
 ![authorization](https://user-images.githubusercontent.com/60199339/164947683-62603bed-d6d1-4d1a-a92f-b053fee78ee3.png)
 
