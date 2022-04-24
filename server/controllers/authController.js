@@ -70,7 +70,7 @@ exports.generateAccessToken = async (req, res) => {
     try {
         const rf_token = req.cookies.refreshtoken;
 
-        if (!rf_token) return res.status(400).json;
+        if (!rf_token) return res.status(400).json({error:'Por favor, faça login.'});
 
         jwt.verify(rf_token, REFRESH_TOKEN_SECRET, async (err, result) => {
             if (err) return res.status(400).json({ error: 'Por favor, faça login.' });
