@@ -21,6 +21,8 @@
 
     - Cookies(cookie-parser) para armazenar as informações de sessão.
 
+    - Multer para manipulação multipart/form-data(necessário para realizar upload de imagens);
+    
     - API da Cloudinary para armazenamento de imagens.
 
     - Mongoose ORM para manipular os dados da nossa database.
