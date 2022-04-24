@@ -1,0 +1,720 @@
+{
+	"info": {
+		"_postman_id": "6db8e069-7ca8-4953-837f-599ee12847d4",
+		"name": "backend_api_qd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ciclano\",\r\n    \"email\":\"ciclano@gmail.com\",\r\n    \"password\":\"1234567\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Cadastro de usuários."
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ciclano@gmail.com\",\r\n    \"password\":\"1234567\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login do usuário."
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ciclano@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						},
+						"description": "Recuperação de senha, necessário fornecer um e-mail real para receber o e-mail."
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resetToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjQ1NGQ3N2YxMThmYzBjOWU1NTJiMSIsImlhdCI6MTY1MDc0NDk1OCwiZXhwIjoxNjUwNzQ2MTU4fQ.GJ8F504uEw26CWzQ98hgN-yAYiu8asy7S7AS\",\r\n    \"password\":\"novasenha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/auth/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						},
+						"description": "Forneça o token que foi enviado para o e-mail do usuário, ou acesse o schema do usuário no mongo compass ou alguma GUI e copie o \"resetToken\", em \"password\" coloque sua nova senha.\n\n(Esta etapa só funcionará após o uso do endpoint \"forgot password\", onde faremos um update no resetToken do usuário que está requisitando uma troca de senha.)"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Logout.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "title",
+									"value": "Post do Fulano",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "descrição do Fulano",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/posts/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts",
+								"new"
+							]
+						},
+						"description": "Criação de post, o campo de \"imagem\" não é obrigatório.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/posts/626453797f118fc0c9e552ae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts",
+								"626453797f118fc0c9e552ae"
+							]
+						},
+						"description": "Forneça o id do post que deseja remover na url.\nPS:NPS:Necessário token de autenticação para ter permissão de uso/acesso., somente o criador do post tem permissão para deletar seu próprio post."
+					},
+					"response": []
+				},
+				{
+					"name": "Details Post",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/posts/626468f790ce051318db2308",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts",
+								"626468f790ce051318db2308"
+							]
+						},
+						"description": "Detalhes do post, e também o incremento de mais uma visualização.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Posts",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts"
+							]
+						},
+						"description": "Rota de relatório dos posts, fornece título e quantidade de visualizações, likes/dislikes e comentários.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Post",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Edit do ciclano\",\r\n    \"description\":\"Edit do primeiro post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/posts/62645b8c7f118fc0c9e552db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts",
+								"62645b8c7f118fc0c9e552db"
+							]
+						},
+						"description": "Forneça o ID do post que deseja editar na url.\nmas, somente o criador do post tem permissão.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				},
+				{
+					"name": "historyPost",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/posts/history/6263154fa3c21aeb552c7415",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts",
+								"history",
+								"6263154fa3c21aeb552c7415"
+							]
+						},
+						"description": "Forneça o ID do post que deseja visualizar o histórico de edição.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"content\":\"Comentário do Ciclano\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/comments/626453797f118fc0c9e552ae/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"comments",
+								"626453797f118fc0c9e552ae",
+								"new"
+							]
+						},
+						"description": "Coloque o id do post em que deseja comentar na url.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/comments/26455017f118fc0c9e552b6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"comments",
+								"26455017f118fc0c9e552b6"
+							]
+						},
+						"description": "Forneça o ID do comentário que deseja deletar.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Like/Dislike Post",
+			"item": [
+				{
+					"name": "Like Post",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/posts/62645b8c7f118fc0c9e552db/like",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts",
+								"62645b8c7f118fc0c9e552db",
+								"like"
+							]
+						},
+						"description": "Forneça o ID do post que deseja dar like na url, caso o usuário já tenha dado um like no post e tente novamente, o like é removido.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				},
+				{
+					"name": "Dislike Post",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/posts/62645b8c7f118fc0c9e552db/dislike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"posts",
+								"62645b8c7f118fc0c9e552db",
+								"dislike"
+							]
+						},
+						"description": "Forneça o ID do post que deseja dar dislike na url, caso o usuário já tenha dado um dislike no post e tente novamente, o dislike é removido.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "My Profile",
+			"item": [
+				{
+					"name": "Edit Profile",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Fulano\",\r\n    \"email\":\"fulanonovoemail@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"me"
+							]
+						},
+						"description": "Edição do perfil de usuário.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentPassword\":\"123456\",\r\n    \"newPassword\":\"novasenha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/me/change-passw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"me",
+								"change-passw"
+							]
+						},
+						"description": "Trocar senha.\nPS:Necessário token de autenticação para ter permissão de uso/acesso."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

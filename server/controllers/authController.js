@@ -57,6 +57,15 @@ exports.userLogin = async (req, res) => {
     }
 };
 
+exports.userLogout = async (req, res) => {
+    try {
+        res.clearCookie('refreshtoken', { path: '/api/auth/refresh_token' })
+        return res.json({ message: "Logout efetuado!" })
+    } catch (err) {
+        return res.status(500).json({ error: err.message })
+    }
+};
+
 exports.generateAccessToken = async (req, res) => {
     try {
         const rf_token = req.cookies.refreshtoken;
