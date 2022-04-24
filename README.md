@@ -13,11 +13,14 @@
 
 
 ## Principais dependências e motivos da escolha:
+    
     - Bcryptjs para criptografia de senha e outros recursos como comparação de hash para login, reset de senha etc.
   
     - JWT para recursos como token de acesso e refresh token.
 
     - MongoDB por ser ágil, simples e permitir a  manipulação de diversos dados de forma eficiente.
+    
+    - Express: pois oferece ótimos recursos para construção do nosso servidor, além de ser rápido.
 
     - Cookies(cookie-parser) para armazenar as informações de sessão.
 
