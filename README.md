@@ -20,7 +20,7 @@
 
     - MongoDB por ser ágil, simples e permitir a  manipulação de diversos dados de forma eficiente.
     
-    - Express: pois oferece ótimos recursos para construção do nosso servidor, além de ser rápido.
+    - Express: pois oferece um conjunto robusto de recursos para aplicações web, além de ser mínimo e flexível.
 
     - Cookies(cookie-parser) para armazenar as informações de sessão.
 
