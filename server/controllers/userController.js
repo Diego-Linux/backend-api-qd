@@ -45,7 +45,7 @@ exports.changePassword = async (req, res) => {
             _id: req.user._id,
         }, { password: newPasswordHash });
 
-        return res.status(400).json({ message: 'Senha alterada com sucesso.' })
+        return res.status(200).json({ message: 'Senha alterada com sucesso.' })
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
